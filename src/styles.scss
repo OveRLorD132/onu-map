@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import './colors.scss';
+
+@font-face {
+  font-family: 'aeonik';
+  src: url(aeonik.otf);
+}
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: url(proxima_nova_reg.ttf);
+}
+
+.menus-cont {
+  display: flex;
+  flex-direction: row;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: $text-color;
+  //font-family: 'proxima-nova';
+  font-family: 'aeonik';
+}

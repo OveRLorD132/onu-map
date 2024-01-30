@@ -1,0 +1,33 @@
+<div class="main-cont">
+  <div class="images-main-cont">
+    <h1 class="primary-header">
+      All Images
+      <div class="select-cont">
+        Sort by:
+        <select class="sort-select" (change)="setSortType($event.target)">
+          <option *ngFor="let option of ['Name', 'Order']" class="select-option">
+            {{ option }}
+          </option>
+        </select>
+      </div>
+    </h1>
+    <ng-template [ngIf]="sortType === 'by-name'">
+      <div class="header" *ngFor="let name of names">
+        <h2 class="name">{{ name }}</h2>
+        <div class="images-cont">
+          <img class="small-image" *ngFor="let index of sortedImages[name]" 
+            [src]="'assets/buildings/' + index + '.png'" 
+          />
+        </div>
+      </div>
+    </ng-template>
+    <ng-template [ngIf]="sortType === 'by-order'">
+      <div class="images-cont">
+        <img class="small-image" *ngFor="let image of images" 
+          [src]="'assets/buildings/' + image.imageIndex + '.png'"
+        />
+      </div>
+    </ng-template>
+    <img src="assets/icons/close.png" class="close-btn" (click)="hideOverlay()" />
+  </div>
+</div>

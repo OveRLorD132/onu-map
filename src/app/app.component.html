@@ -1,0 +1,26 @@
+<div class="main-cont">
+  <div class="main-line">
+    <div class="menus-cont">
+      <menu-elem *ngFor="let elem of menus; index as i" 
+        [menuStrip]="elem" [index]="i"
+        [lastIndex]="menus.length - 1" [nestingLevel]="0"
+      />
+    </div>
+    <search-input/>
+    <div class="profile-image"><img class="profile-image-img" src="assets/profile_pic.png"/></div>
+  </div>
+  <div>
+    <div class="page-cont">
+      <h1 style="color: #000000;">About ONU</h1>
+      <div class="main-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <buildings-images (showImages)="showImagesOverlay()" [buildings]="buildings"/>
+    </div>
+  </div>
+  <div class="overlay-cont" *ngIf="overlayIsVisible">
+    <all-images *ngIf="overlayIsVisible" @showOverlay
+      (closeOverlay)="hideImagesOverlay()" [images]="buildings"
+    />
+  </div>
+</div>

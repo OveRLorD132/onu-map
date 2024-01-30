@@ -1,0 +1,44 @@
+@import '../../colors.scss';
+
+.buildings-cont {
+  transition: scroll-behavior .3s ease;
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  row-gap: 20px;
+  column-gap: 20px;
+  //justify-content: center;
+}
+
+.buttons-cont {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  column-gap: 5px;
+}
+
+.scroll-button {
+  width: 20px;
+  border-radius: 50%;
+  background-color: $button-blue;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  &:hover {
+    background-color: $button-hover-blue;
+  }
+}
+
+.show-images-btn {
+  position: absolute;
+  right: 100px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #8F3985;
+  &:hover {
+    text-decoration: underline;
+  }
+}

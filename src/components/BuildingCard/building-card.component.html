@@ -1,0 +1,6 @@
+<div class="building-card-cont" (mouseover)="showOverlay()" (mouseleave)="hideOverlay()">
+  <img class="building-card-image" (loadeddata)="emitLoaded()"
+    [src]="'assets/buildings/' + buildingInfo.imageIndex + '.png'" 
+  />
+  <div *ngIf="isHovered" [@showOverlay] class="building-name">{{ buildingInfo.name }}</div>
+</div>

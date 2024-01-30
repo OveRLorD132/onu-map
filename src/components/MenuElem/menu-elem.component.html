@@ -1,0 +1,19 @@
+<div class="menu-strip" #menuStripDiv [ngClass]="{
+  'first-strip' : index === 0 && lastIndex !== 0 && !nestingLevel,
+  'last-strip': index === lastIndex && lastIndex !== 0 && !nestingLevel,
+  'lone-strip' : index === lastIndex && !nestingLevel,
+  'main-strip' : !nestingLevel
+}" (mouseover)="showElems($event)" (mouseleave)="hideElems($event)">
+  {{ menuStrip.name }}
+  <div class="elems-main-cont" *ngIf="isOpened && menuStrip.elements.length" (mouseover)="showElems($event)"
+  [ngStyle]="{'left': nestingLevel ? '151px' : '', 'top': nestingLevel ? '0px' : '40px'}">
+    <div class="elems-cont">
+      <div class="nested-menu-container" *ngFor="let elem of menuStrip.elements; index as i" >
+        <menu-elem
+          [menuStrip]="elem" [index]="i" [nestingLevel]="nestingLevel + 1"
+          [lastIndex]="menuStrip.elements.length - 1" 
+        />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<div class="search-main-cont" [ngStyle]="{ 'outline': isFocused ? '' : 'none' }">
+  <img class="search-image" src="assets/icons/search.png"/>
+  <input type="text" class="search-input" placeholder="Search..." 
+    (focus)="showOutline()" (blur)="hideOutline()"
+  />
+</div>

@@ -1,0 +1,56 @@
+
+@import '../colors.scss';
+
+.main-line {
+  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  //position: sticky;
+  border-bottom: .1px solid lightgray;
+}
+
+.search-input {
+  background-color: $hover-grey;
+  border: none;
+  outline: none;
+  margin-right: 20px;
+  padding: 15px;
+  width: 250px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.profile-image {
+  margin-right: 15px;
+}
+
+.profile-image-img {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.page-cont {
+  background-color: #ffffff;
+  padding: 20px 60px 0 60px;
+}
+
+.main-text {
+  color: $text-color;
+  font-size: 16px;
+  max-width: 600px;
+}
+
+
+.overlay-cont {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}

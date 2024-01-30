@@ -1,0 +1,25 @@
+@import '../../colors.scss';
+
+.search-main-cont {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: $hover-grey;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  outline: 2px solid black;
+}
+
+.search-image {
+  width: 22px;
+  
+}
+
+.search-input {
+  padding: 0 10px 0 10px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  font-family: 'aeonik';
+  font-size: 17px;
+}

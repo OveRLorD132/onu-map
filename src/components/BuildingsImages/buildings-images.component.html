@@ -1,0 +1,13 @@
+<div class="images-main-cont">
+  <h1 style="color: #000000; position: relative; display: flex; flex-direction: row; align-items: center;">
+    ONU Buildings
+    <div class="show-images-btn" (click)="showImagesDialog()">Show All Images</div>
+    <img class="scroll-button" src="assets/icons/next.png" style="transform: scaleX(-1); right: 45px;"
+      (click)="scrollElement(false)" *ngIf="scrolledSide !== 'left'" />
+    <img class="scroll-button" src="assets/icons/next.png" style="right: 0;" (click)="scrollElement(true)"
+      *ngIf="scrolledSide !== 'right'" />
+  </h1>
+  <div class="buildings-cont" id="buildingsCont">
+    <building-card (imageLoaded)="setScroll()" *ngFor="let building of buildings" [buildingInfo]="building" />
+  </div>
+</div>

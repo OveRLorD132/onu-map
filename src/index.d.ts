@@ -1,3 +1,5 @@
+import { LatLng } from "leaflet";
+
 interface MenuStrip {
   name : string,
   elements : Array<MenuStrip>
@@ -15,3 +17,8 @@ interface ImagesSet {
 type ScrolledSide = 'left' | 'none' | 'right' | 'no-scroll';
 
 type SortType = 'by-name' | 'by-order';
+
+interface BuildingCoords {
+  name : string,
+  coords : LatLngLiteral
+}

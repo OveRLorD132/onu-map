@@ -1,6 +1,6 @@
 <div class="main-cont">
   <div class="images-main-cont">
-    <h1 class="primary-header">
+    <h1 class="main-header primary-header">
       All Images
       <div class="select-cont">
         Sort by:
@@ -15,9 +15,12 @@
       <div class="header" *ngFor="let name of names">
         <h2 class="name">{{ name }}</h2>
         <div class="images-cont">
-          <img class="small-image" *ngFor="let index of sortedImages[name]" 
-            [src]="'assets/buildings/' + index + '.png'" 
-          />
+          <div class="image-cont" *ngFor="let index of sortedImages[name]" >
+            <img class="building-image small-image"
+              [src]="'assets/buildings/' + index + '.png'" 
+            />
+          </div>
+
         </div>
       </div>
     </ng-template>

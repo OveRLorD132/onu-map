@@ -17,6 +17,11 @@
   }
 }
 
+.menu-text {
+  overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 .nested-menu-container {
   //padding: 7px 10px 7px 10px;
   //border-bottom: 1px solid $text-color;
@@ -61,4 +66,28 @@
 .strip-cont {
   display: flex;
   flex-direction: row;
+}
+
+.right-menu {
+  left: 151px;
+  top: 0;
+}
+
+.top-menu {
+  top: 40px;
+}
+
+@media (max-width: 768px) {
+  .menu-strip {
+    font-size: 10px;
+    padding: 0 5px 0 5px;
+    width: 60px;
+  }
+  .right-menu {
+    left: 70px;
+  }
+  
+  .top-menu {
+    top: 20px;
+  }
 }

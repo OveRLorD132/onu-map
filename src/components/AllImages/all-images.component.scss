@@ -32,9 +32,9 @@
 .small-image {
   object-fit: cover;
   object-position: center;
+  cursor: pointer;
   width: 300px;
   height: 300px;
-  cursor: pointer;
 }
 
 .primary-header {
@@ -57,4 +57,46 @@
   outline: none;
   background-color: $elem-grey;
   font-family: 'aeonik';
+}
+
+.building-image {
+  transition: width .3s ease;
+}
+
+.image-cont {
+  width: 300px;
+  height: 300px;
+}
+
+.wide-image {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  .image-cont {
+    width: 100px;
+    height: 100px;
+  }
+  .images-cont {
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 10px;
+  } 
+  .small-image {
+    width: 100px;
+    height: 100px;
+  }
+  .name {
+    font-size: 12px;
+  }
+  .select-cont {
+    font-size: 12px;
+  }
+  .sort-select {
+    font-size: 12px;
+    padding: 3px;
+  }
 }

@@ -5,14 +5,14 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  animations: [
-    trigger('showOverlay', [
-      state('void', style({ width: '0', opacity: 0})),
-      state('*', style({width: '100%', opacity: 1})),
-      transition(':enter', [animate('.1s')]),
-      transition(':leave', [animate('.1s')])
-    ])
-  ]
+  // animations: [
+  //   trigger('showOverlay', [
+  //     state('void', style({ width: '0', opacity: 0})),
+  //     state('*', style({width: '100%', opacity: 1})),
+  //     transition(':enter', [animate('.1s')]),
+  //     transition(':leave', [animate('.1s')])
+  //   ])
+  // ]
 })
 export class AppComponent {
   title = 'pages';
@@ -61,10 +61,10 @@ export class AppComponent {
       ]
     },
     {
-      name: 'ONU 2',
+      name: 'ONU faculties',
       elements: [
         {
-          name: "ONU 2 Build",
+          name: "Faculty 1",
           elements: [
             {
               name: 'ONU Corp 1',
@@ -103,7 +103,7 @@ export class AppComponent {
           ]
         },
         {
-          name: 'ONU 2 Build',
+          name: 'Faculty 2',
           elements: [
             {
               name: 'ONU Corp 1',
@@ -150,6 +150,10 @@ export class AppComponent {
     }
   ]
   overlayIsVisible = false;
-  showImagesOverlay = () => this.overlayIsVisible = true;
-  hideImagesOverlay = () => this.overlayIsVisible = false;
+  showImagesOverlay() { 
+    this.overlayIsVisible = true;
+  }
+  hideImagesOverlay() {
+    this.overlayIsVisible = false;
+  } 
 }

@@ -1,0 +1,40 @@
+@import '../../colors.scss';
+
+.map {
+  height: 600px;
+  width: 100%;
+  z-index: 1;
+}
+
+.radio-cont {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin-bottom: 7px;
+}
+
+.map-btn {
+  font-size: 18px;
+  box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+  //border: .1px solid $text-color;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.map-btn-active {
+  background-color: $elem-grey;
+}
+
+.map-btn-inactive:hover {
+  background-color: $hover-grey;
+}
+
+@media (max-width: 768px) {
+  .map {
+    height: 200px;
+  }
+  .map-btn {
+    font-size: 12px;
+    padding: 5px;
+  }
+}

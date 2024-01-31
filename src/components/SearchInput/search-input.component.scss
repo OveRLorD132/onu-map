@@ -23,3 +23,18 @@
   font-family: 'aeonik';
   font-size: 17px;
 }
+
+@media (max-width: 768px) {
+  .search-main-cont {
+    padding: 5px;
+    border-radius: 5px;
+    width: 80px;
+  }
+  .search-image {
+    width: 12px;
+  }
+  .search-input {
+    padding: 0 2px 0 2px;
+    font-size: 10px;
+  }
+}

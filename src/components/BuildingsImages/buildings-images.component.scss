@@ -42,3 +42,24 @@
     text-decoration: underline;
   }
 }
+
+.right-btn {
+  right: 45px;
+}
+
+@media (max-width: 768px) {
+  .buildings-cont {
+    column-gap: 5px;
+  }
+  .scroll-button {
+    width: 10px;
+    padding: 5px;
+  }
+  .show-images-btn {
+    right: 55px;
+    font-size: 12px;
+  }
+  .right-btn {
+    right: 25px;
+  }
+}

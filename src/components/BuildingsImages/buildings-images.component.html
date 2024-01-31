@@ -1,8 +1,9 @@
 <div class="images-main-cont">
-  <h1 style="color: #000000; position: relative; display: flex; flex-direction: row; align-items: center;">
+  <h1 class="main-header" style="color: #000000; position: relative; display: flex; flex-direction: row; align-items: center;">
     ONU Buildings
     <div class="show-images-btn" (click)="showImagesDialog()">Show All Images</div>
-    <img class="scroll-button" src="assets/icons/next.png" style="transform: scaleX(-1); right: 45px;"
+    <img class="scroll-button right-btn" src="assets/icons/next.png" 
+      style="transform: scaleX(-1);"
       (click)="scrollElement(false)" *ngIf="scrolledSide !== 'left'" />
     <img class="scroll-button" src="assets/icons/next.png" style="right: 0;" (click)="scrollElement(true)"
       *ngIf="scrolledSide !== 'right'" />

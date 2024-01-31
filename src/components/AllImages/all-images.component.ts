@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from "@angular/core";
 
+import { BuildingInfo, SortType, ImagesSet } from '../..';
+
 @Component({
   selector: 'all-images',
   templateUrl: './all-images.component.html',

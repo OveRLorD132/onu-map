@@ -1,4 +1,7 @@
 import { Component, Input, ViewChild, ElementRef } from "@angular/core";
+
+import { MenuStrip } from "../..";
+
 @Component({
   selector: 'menu-elem',
   templateUrl: './menu-elem.component.html',

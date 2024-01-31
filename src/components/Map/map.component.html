@@ -1,0 +1,15 @@
+<div class="map-main-cont">
+  <h1 class="main-header">Location</h1>
+  <div class="radio-cont">
+    <div class="map-btn" (click)="setIndex(coordsList.indexOf(elem))" 
+      *ngFor="let elem of coordsList"
+      [ngClass]="{ 'map-btn-active': coordsList.indexOf(elem) === pickedCoords,
+      'map-btn-inactive': coordsList.indexOf(elem) !== pickedCoords}"
+    >
+      Building {{ coordsList.indexOf(elem) + 1 }}
+    </div>
+  </div>
+  <div class="map"
+    leaflet [leafletOptions]="options" (leafletMapReady)="onMapReady($event)">
+  </div>
+</div>
